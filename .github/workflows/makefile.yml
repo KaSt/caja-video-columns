@@ -1,0 +1,22 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+          
+    - name: Install dependencies
+      run: apt install -y python3 python3-gi gir1.2-caja-2.0 python3-caja python3-pip ffmpeg && pip3 install ffmpeg-python
+      
+    - name: Build the package
+      run: make
+      
