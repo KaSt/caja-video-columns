@@ -26,6 +26,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         file: "*.deb"
-        tags: true
+        tags: false
         draft: false
       
