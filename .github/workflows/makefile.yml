@@ -20,13 +20,12 @@ jobs:
     - name: Build the package
       run: make
       
-    - name: Upload built package to Releases
-      uses: svenstaro/upload-release-action@v2
+    - name: Publish Package to Releases
+      uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: build/*.deb
-        asset_name: caja-video-columns.deb
-        tag: ${{ github.ref }}
-        overwrite: true
-        body: "Release of caja-video-columns"
+        file: "*.deb"
+        tags: true
+        draft: false
       
