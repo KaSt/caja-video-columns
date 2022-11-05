@@ -12,11 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-          
-    - name: Install dependencies
-      run: sudo apt install -y python3 python3-gi gir1.2-caja-2.0 python3-caja python3-pip ffmpeg && pip3 install ffmpeg-python
-      
+    - uses: actions/checkout@v3      
     - name: Build the package
       run: make
       
@@ -25,7 +21,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "*.deb"
+        file: "./build/*.deb"
         tags: false
         draft: false
       
