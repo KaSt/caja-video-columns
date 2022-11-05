@@ -1,0 +1,25 @@
+# caja-video-columns
+
+Originally named nautilus-columns and published on Github here https://github.com/atareao/nautilus-columns is a nautilus extension to show metadata of images, PDFs and videos.
+
+It used MediaInfo (called via a wrapper) to fetch video properties.
+
+I modified it to remove image and PDFs metadata scavenging, only leaving video properties and this version uses FFMPEG (ffprobe) to detect the video properties.
+
+The additional columns available are:
+
+- Width: the video frame width
+- Height: the video frame height
+- Resolution: Width X Height
+- Duration: the duration of the video
+- Audio Format: the audio encoding
+- Video Format: the video format
+- Codec: the video codec
+- Definition: whether the video is 1080p, 720p, 4K...
+- Video/Audio: whether the video contains or not video / audio tracks
+
+Builds are automatically available in the Releases tab
+
+Take care
+
+Ka. 
