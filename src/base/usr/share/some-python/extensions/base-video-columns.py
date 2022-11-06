@@ -22,9 +22,26 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# locale
+import sys
+import os
+import json
+import math
+import locale
+import gettext
+
 import gi
 try:
-    gi.require_version('Caja', '2.0')
+    thisFile = os.path.basename(__file__)
+    if thisFile.startswith("caja"):
+        gi.require_version('Caja', '2.0')
+
+    if thisFile.startswith("nautilus"):
+        gi.require_version('Nautilus', '3.0')
+
+    if thisFile.startswith("nemo"):
+        gi.require_version('Nemo', '3.0')
+
     gi.require_version('GObject', '2.0')
 except ValueError as error:
     print(error)
@@ -37,13 +54,6 @@ import urllib.parse
 
 import ffmpeg
 
-# locale
-import sys
-import os
-import json
-import math
-import locale
-import gettext
 
 class MediaInfoData:
     def __init__(self, path_to_video):

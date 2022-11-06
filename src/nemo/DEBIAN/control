@@ -1,0 +1,15 @@
+Package: nemo-video-columns
+Version: 1.01
+Architecture: all
+Maintainer: Ka
+Installed-Size: 40
+Depends: python3, python3-gi, gir1.2-caja-2.0, python3-nemo, ffmpeg
+Section: gnome
+Priority: extra
+Description: Nemo Extension
+ *** Unofficial package ***
+ A Nemo extension to display video properties info in the
+ Nemo List View. Originally by Lorenzo Carbonell Cerezo 
+ <lorenzo.carbonell.cerezo@gmail.com>
+ Please install ffmpeg-python using pip
+ Updated to use FFMPEG by Ka for Astoria

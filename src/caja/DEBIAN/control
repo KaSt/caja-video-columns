@@ -11,4 +11,5 @@ Description: Caja Extension
  A Caja extension to display video properties info in the
  Caja List View. Originally by Lorenzo Carbonell Cerezo 
  <lorenzo.carbonell.cerezo@gmail.com>
+ Please install ffmpeg-python using pip
  Updated to use FFMPEG by Ka for Astoria
