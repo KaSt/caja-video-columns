@@ -1,1 +1,4 @@
-./build/*.deb
+build/*.deb
+src/caja/DEBIAN/control
+src/nautilus/DEBIAN/control
+src/nemo/DEBIAN/control
