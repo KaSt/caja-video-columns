@@ -2,9 +2,9 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ "master", "dev" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "master", "dev" ]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -23,6 +23,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         file: "./build/*.deb"
-        tags: false
+        tags: true
         draft: false
             
